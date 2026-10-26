@@ -41,11 +41,11 @@ jobs:
 
       - name: Build Android Patch Bundle (.mpp)
         run: |
-          cd keyos-patches
+          cd pixelboard-patches
           ./gradlew :patches:buildAndroid
 
       - name: Upload Compiled Patch Bundle
         uses: actions/upload-artifact@v4
         with:
-          name: keyos-patches-bundle
-          path: keyos-patches/patches/build/libs/*.mpp
+          name: pixelboard-patches-bundle
+          path: pixelboard-patches/patches/build/libs/*.mpp
